@@ -1,0 +1,130 @@
+/* --- style.css içeriği --- */
+
+/* Genel Ayarlar */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: red; /* Tüm sayfa arka planı kırmızı olur */
+    color: #333;
+}
+
+/* Üst Menü (Header) */
+.topbar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topnav__link {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.topnav__link:hover, .topnav__link.is-active {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.user__pill {
+    background-color: #e74c3c;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+/* Sayfa Düzeni (Flexbox kullanarak yan yana dizme) */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Yan Menü (Sidebar) */
+/* Yan Menü (Sidebar) */
+.sidebar {
+    width: 250px;
+    background-color: #2980b9; /* Bu satırı klasik bir mavi tonuyla değiştirdik */
+    padding: 20px;
+}
+
+/* Yan Menüdeki yazıların okunması için link renklerini beyaza çekelim */
+.sidebar__link {
+    display: block;
+    padding: 10px;
+    color: white; /* Mavi arka planda beyaz yazı daha iyi okunur */
+    text-decoration: none;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.sidebar__link:hover {
+    background-color: #3498db; /* Üzerine gelince biraz daha açık mavi olsun */
+}
+
+/* Ana İçerik Alanı */
+.content {
+    flex: 1; /* Kalan tüm boşluğu doldurur */
+    padding: 20px;
+}
+
+/* Kart Tasarımları */
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.badge {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+/* Tablo Tasarımı */
+.dataTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.dataTable th, .dataTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.dataTable th {
+    background-color: #2980b9;
+    color: white;
+}
+
+.dataTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Footer (Alt Kısım) */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #7f8c8d;
+    font-size: 14px;
+}
+.image-container {
+    text-align: center; /* Resmi ortalar */
+    margin: 20px 0;    /* Üstten ve alttan boşluk bırakır */
+}
+
+.table-bottom-img {
+    max-width: 100%;    /* Resmin kartın dışına taşmasını engeller */
+    height: auto;
+    border-radius: 10px; /* Köşeleri yumuşatır */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Hafif gölge verir */
+    border: 3px solid white; /* Resmin etrafına beyaz çerçeve ekler */
+}
