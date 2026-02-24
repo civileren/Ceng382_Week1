@@ -117,14 +117,14 @@ body {
     font-size: 14px;
 }
 .image-container {
-    text-align: center; /* Resmi ortalar */
-    margin: 20px 0;    /* Üstten ve alttan boşluk bırakır */
+    text-align: center; /* Resmi yatayda ortalar */
+    margin-top: 20px;   /* Tablo ile resim arasına boşluk bırakır */
+    padding: 10px;
 }
 
 .table-bottom-img {
-    max-width: 100%;    /* Resmin kartın dışına taşmasını engeller */
-    height: auto;
-    border-radius: 10px; /* Köşeleri yumuşatır */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Hafif gölge verir */
-    border: 3px solid white; /* Resmin etrafına beyaz çerçeve ekler */
+    max-width: 100%;    /* Resmin ekrandan taşmasını engeller */
+    height: auto;       /* Oranını korur */
+    border-radius: 8px; /* Köşeleri hafif yuvarlar */
+    border: 2px solid #ddd; /* İsteğe bağlı: Resmin etrafına ince çerçeve */
 }

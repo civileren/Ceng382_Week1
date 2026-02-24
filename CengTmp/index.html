@@ -8,7 +8,6 @@
 </head>
 
 <body>
-  <!-- TOP NAV -->
   <header class="topbar">
     <div class="brand">CENG Web Demo</div>
 
@@ -24,9 +23,7 @@
     </div>
   </header>
 
-  <!-- PAGE LAYOUT -->
   <div class="layout">
-    <!-- SIDE MENU -->
     <aside class="sidebar" aria-label="Yan Menü">
       <h2 class="sidebar__title">Menü</h2>
       <a class="sidebar__link is-active" href="#">Dashboard</a>
@@ -43,27 +40,24 @@
       </div>
     </aside>
 
-    <!-- MAIN CONTENT -->
     <main class="content">
+      
       <section class="card">
         <h1 class="card__title">1. Hafta: HTML & CSS Sayfa İskeleti</h1>
         <p class="card__text">
-          Bu örnekte <strong>üst menü</strong>, <strong>yan menü</strong> ve ortada
-          <strong>3x5 tablo</strong> bulunuyor. Öğrenciler için sınıfta “kutu modeli, padding,
-          margin, border, hover, active” gibi konuları göstermek için ideal.
+          Bu örnekte <strong>üst menü</strong>, <strong>yan menü</strong> ve farklı kartlar içinde 
+          <strong>tablo ve görsel</strong> bulunuyor.
         </p>
 
         <div class="badges">
           <span class="badge">HTML Semantik</span>
           <span class="badge">Flexbox</span>
-          <span class="badge">Tablo</span>
-          <span class="badge">Hover</span>
+          <span class="badge">Kart Düzeni</span>
         </div>
       </section>
 
       <section class="card">
-        <h2 class="card__subtitle">Örnek Veri Tablosu (3 x 5)</h2>
-
+        <h2 class="card__subtitle">Öğrenci Veri Tablosu</h2>
         <div class="tableWrap">
           <table class="dataTable">
             <thead>
@@ -75,26 +69,23 @@
                 <th>Harf</th>
               </tr>
             </thead>
-
             <tbody>
-              <tr>
-                <td>1</td><td>Ayşe Kaya</td><td>78</td><td>85</td><td>BA</td>
-              </tr>
-              <tr>
-                <td>2</td><td>Mehmet Demir</td><td>65</td><td>72</td><td>CB</td>
-              </tr>
-              <tr>
-                <td>3</td><td>Elif Yılmaz</td><td>90</td><td>93</td><td>AA</td>
-              </tr>
+              <tr><td>1</td><td>Ayşe Kaya</td><td>78</td><td>85</td><td>BA</td></tr>
+              <tr><td>2</td><td>Mehmet Demir</td><td>65</td><td>72</td><td>CB</td></tr>
+              <tr><td>3</td><td>Elif Yılmaz</td><td>90</td><td>93</td><td>AA</td></tr>
             </tbody>
           </table>
-          <div class="image-container">
-    <img src="zbam.jpg" alt="Karikatur" class="table-bottom-img">
-</div>
         </div>
+        <p class="muted">Not: Bu tablo 3 satır ve 5 sütun içerir.</p>
+      </section>
 
-        <p class="muted">
-          Not: Bu tablo 3 satır (öğrenci) ve 5 sütun içerir.
+      <section class="card">
+        <h2 class="card__subtitle">Örnek Görsel</h2>
+        <div class="image-container" style="text-align: center; padding: 20px 0;">
+          <img src="zbam.jpg" alt="Karikatur" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        </div>
+        <p class="card__text">
+          Eren Civil
         </p>
       </section>
 
@@ -104,6 +95,7 @@
         <a class="footer__link" href="#">Gizlilik</a>
         <a class="footer__link" href="#">Yardım</a>
       </footer>
+
     </main>
   </div>
 </body>
