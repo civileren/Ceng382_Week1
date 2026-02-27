@@ -128,3 +128,21 @@ body {
     border-radius: 8px; /* Köşeleri hafif yuvarlar */
     border: 2px solid #ddd; /* İsteğe bağlı: Resmin etrafına ince çerçeve */
 }
+/* --- Aksiyon Butonları Tasarımı --- */
+.action-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    border: none; /* Daha modern bir görünüm için kenarlığı kaldırdık */
+    background-color: #3498db; /* Sitenin yan menüsündeki mavi tona yakın tatlı bir renk */
+    color: white; /* İçindeki yazının rengi */
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Hover efekti için yumuşak bir geçiş */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Hafif bir derinlik (gölge) efekti */
+}
+
+/* Mouse ile butonun üzerine gelindiğinde (hover) çalışacak tasarım */
+.action-btn:hover {
+    background-color: #2980b9; /* Tıklanabilirlik hissini artırmak için daha koyu bir mavi */
+}
