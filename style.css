@@ -145,4 +145,53 @@ body {
 /* Mouse ile butonun üzerine gelindiğinde (hover) çalışacak tasarım */
 .action-btn:hover {
     background-color: #2980b9; /* Tıklanabilirlik hissini artırmak için daha koyu bir mavi */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Hover durumunda gölgeyi biraz daha belirginleştirir */
+}
+.two-column-layout {
+  display: flex;
+  gap: 20px;
+  align-items: stretch; /* Sağ ve sol kolonun eşit boyda olmasını sağlar */
+}
+
+/* Sol Taraftaki Tablo ve Görsel Sütunu */
+.column-left {
+  flex: 2; /* Sol taraf daha geniş yer kaplar */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Tablo ve Görsel kartı arasına boşluk bırakır */
+}
+
+/* Sol kolonun içindeki kartların kendi alt boşluklarını sıfırlıyoruz (gap hallediyor) */
+.column-left .card {
+  margin-bottom: 0; 
+}
+
+/* Sağ Taraftaki Fare Efekti Sütunu */
+/* Sağ Taraftaki Fare Efekti Sütunu */
+.column-right {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* İŞTE BURASI: İçindeki kartı dikeyde tam ortaya hizalar */
+}
+
+/* Fare efekti kartı */
+#clock-card {
+  width: 100%;
+ /* Sadece içindeki yazı kadar yer kaplar */
+  margin-bottom: 0;
+  position: relative; 
+  overflow: hidden; 
+  /* İçeriği kartın ortasına hizalamak için: */
+  /* Yazıyı kartın üstünde tutar, efektler aşağıda çalışır */
+  padding: 200px 30px; 
+  display: block;
+  text-align: left;/* İsteğe bağlı: Kart biraz daha dolgun dursun diye iç boşluk ekledik */
+}
+
+/* Ekran küçüldüğünde (Mobilde) her şeyi alt alta geçir */
+@media (max-width: 992px) {
+  .two-column-layout {
+    flex-direction: column;
+  }
 }
