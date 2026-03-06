@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Lab3.Models.Student>
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3>Student Grade Table</h3>
+        <button id="calcBtn" class="btn btn-primary">Calculate Letter Grades</button>
+    </div>
+
+    <table class="table table-striped table-hover border" id="studentTable">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Student</th>
+                <th>Midterm</th>
+                <th>Final</th>
+                <th>Letter Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student.Id</td>
+                    <td>@student.Name</td>
+                    <td class="midterm-score">@student.Midterm</td>
+                    <td class="final-score">@student.Final</td>
+                    <td class="letter-grade text-danger fw-bold"></td> </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script>
+        // Butonu dinliyoruz
+        document.getElementById('calcBtn').addEventListener('click', function () {
+            // Tablodaki tüm satırları alıyoruz (başlık hariç)
+            const rows = document.querySelectorAll('#studentTable tbody tr');
+
+            rows.forEach(row => {
+                // Vize ve Final notlarını tablodan çekiyoruz
+                const midterm = parseFloat(row.querySelector('.midterm-score').innerText);
+                const final = parseFloat(row.querySelector('.final-score').innerText);
+
+                const average = (midterm * 0.4) + (final * 0.6);
+                let letter = '';
+
+                // Harf notu aralıkları (Bunu okulunun sistemine göre değiştirebilirsin)
+                if (average >= 90) letter = 'AA';
+                else if (average >= 85) letter = 'BA';
+                else if (average >= 80) letter = 'BB';
+                else if (average >= 75) letter = 'CB';
+                else if (average >= 70) letter = 'CC';
+                else if (average >= 65) letter = 'DC';
+                else if (average >= 60) letter = 'DD';
+                else if (average >= 50) letter = 'FD';
+                else letter = 'FF';
+
+                row.querySelector('.letter-grade').innerText = letter;
+            });
+        });
+    </script>
+}
